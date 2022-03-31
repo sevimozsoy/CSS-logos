@@ -1,0 +1,65 @@
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  .spotify {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: #00db4d;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+    transform: rotate(9deg);
+  }
+  
+  .line {
+    border: var(--line) solid transparent;
+    border-top: var(--line) solid #fff;
+    border-radius: 50%;
+    height: 2rem;
+    width: var(--width);
+    position: absolute;
+    margin-top: var(--margin-top);
+  }
+  .line:before,
+  .line:after {
+    content: "";
+    width: calc(var(--line) - 1.5px);
+    height: calc(var(--line) - 2.5px);
+    background-color: #fff;
+    border-radius: 45%;
+    position: absolute;
+  }
+  .line:before {
+    top: var(--top);
+    left: var(--horizontal);
+  }
+  .line:after {
+    top: var(--top);
+    right: var(--horizontal);
+  }
+  .top {
+    --width: 5rem;
+    --line: 1rem;
+    --top: -5px;
+    --horizontal: -6px;
+  }
+  .mid {
+    --width: 4rem;
+    --line: 0.75rem;
+    --margin-top: 2.5rem;
+    --top: -2px;
+    --horizontal: -4px;
+  }
+  .bottom {
+    --width: 3.25rem;
+    --line: 0.5rem;
+    --margin-top: 4.75rem;
+    --top: 0px;
+    --horizontal: 0px;
+  }
+  
